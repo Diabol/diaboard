@@ -13,8 +13,6 @@ module.exports = function(config, dependencies, job_callback) {
     for (var metric in metrics) {
         metricsNames.push(metric);
     }
-    var url = config.sonarUrl + "/api/resources?resource=" + config.resource + "&includetrends=true&metrics=" + metricsNames.join(",");
-    logger.error(url);
     var options = {
         url: config.sonarUrl + "/api/resources?resource=" + config.resource + "&includetrends=true&metrics=" + metricsNames.join(","),
         json: {}
