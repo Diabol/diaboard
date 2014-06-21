@@ -16,7 +16,7 @@ Collection of Widgets for Atlasboard
 }
 ```
 
-'''
+```
 "github-pullrequests": {
     "interval": 60000,
     "widgetTitle": "Pull Requests",
@@ -25,5 +25,4 @@ Collection of Widgets for Atlasboard
     "repo": "delivery-pipeline-plugin",
     "token": "xxxxxx"
 }
-
-'''
+```
