@@ -2,17 +2,24 @@
     font-size: 40px;
 }
 
-.issue {
+.metric {
     color: #FFFFFF;
     width: 75%;
     display: inline-block;
     float: left;
     padding-bottom: 18px;
 }
-.count {
+.value {
     font-weight: bold;
     color: #3F80C2;
     width: 18%;
+    float: left;
+    display: inline-block;
+}
+.trend {
+    font-weight: bold;
+    color: #3F80C2;
+    width: 7%;
     float: left;
     display: inline-block;
 }

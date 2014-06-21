@@ -13,9 +13,10 @@ module.exports = function(config, dependencies, job_callback) {
     for (var metric in metrics) {
         metricsNames.push(metric);
     }
-
+    var url = config.sonarUrl + "/api/resources?resource=" + config.resource + "&includetrends=true&metrics=" + metricsNames.join(",");
+    logger.error(url);
     var options = {
-        url: config.sonarUrl + "/api/resources?resource=" + config.resource + "&metrics=" + metricsNames.join(","),
+        url: config.sonarUrl + "/api/resources?resource=" + config.resource + "&includetrends=true&metrics=" + metricsNames.join(","),
         json: {}
     };
 
@@ -31,9 +32,9 @@ module.exports = function(config, dependencies, job_callback) {
                 var metric = msr['key'];
                 var metricName = metrics[metric];
 
-                result.push({issueType: metricName, frequency: msr.frmt_val});
+                result.push({metric: metricName, value: msr.frmt_val, trend: msr.trend});
             }
-            job_callback(null, {issues: result, title: config.widgetTitle });
+            job_callback(null, {metrics: result, title: config.widgetTitle });
         }
     });
 
