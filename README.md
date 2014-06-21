@@ -15,3 +15,15 @@ Collection of Widgets for Atlasboard
     "widgetTitle": "Sonar"
 }
 ```
+
+'''
+"github-pullrequests": {
+    "interval": 60000,
+    "widgetTitle": "Pull Requests",
+    "githubUrl": "https://api.github.com/",
+    "owner": "Diabol",
+    "repo": "delivery-pipeline-plugin",
+    "token": "xxxxxx"
+}
+
+'''
